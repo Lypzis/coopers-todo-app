@@ -1,0 +1,154 @@
+// Base Button Styles
+.btn {
+  @include button-base($color-black);
+  &--login {
+    @include button-size(5rem, 1.2rem, 2px);
+    font-size: $font-size-sm;
+    z-index: 3;
+
+    &:hover {
+      @include hover-effect($color-black, false); // Lighten the color on hover
+    }
+  }
+
+  // Primary button variations
+  &__main {
+    @include button-base($color-primary);
+
+    &--header {
+      font-size: $font-size-md;
+    }
+
+    &--full {
+      width: 100%;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      font-size: $font-size-base;
+      font-weight: $font-weight-bold;
+    }
+
+    &--signin {
+      width: 80%;
+      margin: 3rem auto;
+      border-radius: 0;
+      font-weight: $font-weight-semibold;
+      font-size: $font-size-md;
+      margin-bottom: 4rem;
+    }
+  }
+
+  // Secondary button variations
+  &__secondary {
+    @include button-base($color-black);
+
+    font-weight: $font-weight-semibold;
+    font-size: $font-size-md;
+    margin-bottom: 0;
+
+    &:hover {
+      @include hover-effect($color-black, false);
+    }
+  }
+
+  // Todo-specific button styling
+  &__todo {
+    &--delete {
+      margin-left: auto;
+      background-color: $color-white;
+      color: $color-gray;
+
+      &:hover {
+        @include hover-effect(transparent);
+      }
+    }
+  }
+
+  // Function button styling
+  &__function {
+    @include button-size(1rem, 0.7rem, 2rem);
+    background: $color-white;
+    color: $color-gray;
+    border: 1px solid $color-gray;
+    margin-bottom: 1.5rem;
+
+    &:hover {
+      @include hover-effect(transparent);
+    }
+  }
+
+  // Read more button styling
+  &__read {
+    background: none;
+    color: $color-tertiary;
+    padding: 0;
+    font-size: $font-size-base;
+    font-weight: $font-weight-bold;
+
+    &:hover {
+      @include hover-effect(transparent);
+    }
+  }
+
+  // Close button styling
+  &__close {
+    margin-left: auto;
+    display: block;
+    font-size: $font-size-base-plus;
+    background: transparent;
+    font-weight: $font-weight-bold;
+    color: $color-black;
+
+    &:hover {
+      @include hover-effect(transparent);
+    }
+  }
+}
+
+// Specific styles for check-buttons
+.check-button {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+
+  .circle {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 2px solid $color-secondary;
+    margin-right: 8px;
+    justify-content: center;
+    align-items: center;
+
+    &::after {
+      content: "";
+      width: 1.4rem;
+      height: 1.4rem;
+      border-radius: 50%;
+      background-color: transparent;
+    }
+
+    &--done {
+      border-color: $color-gray;
+      background-color: $color-white;
+
+      &::after {
+        content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="green"><path d="M9 19l-7-7 1.41-1.41L9 16.17l11.59-11.59L22 6l-13 13z"/></svg>');
+      }
+    }
+
+    &:hover {
+      border-color: darken($color-secondary, 10%);
+    }
+  }
+
+  &.checked .circle {
+    border-color: $color-primary;
+    background-color: $color-primary;
+
+    &::after {
+      content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M9 19l-7-7 1.41-1.41L9 16.17l11.59-11.59L22 6l-13 13z"/></svg>');
+    }
+  }
+}

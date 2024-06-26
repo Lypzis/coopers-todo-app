@@ -1,0 +1,94 @@
+// Main container for todo items, using flex layout for alignment and spacing
+.todo-box {
+  max-width: 50rem;
+  margin: auto;
+
+  @include respond-to(small) {
+    display: flex;
+    justify-content: center; // Centers cards horizontally
+    gap: 4rem; // Provides spacing between individual todo cards
+    max-width: 0;
+  }
+
+  &__card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: $color-white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); // Subtle shadow for depth
+    min-width: 36rem; // Minimum width for each card
+    min-height: 58rem; // Minimum height to maintain uniformity
+    height: 100%; // Stretches to fit the container vertically
+
+    &:last-child {
+      margin-top: 4rem; // Adds margin-top to the last card in the todo-box
+    }
+
+    @include respond-to(small) {
+      &:last-child {
+        margin-top: 0; // Adds margin-top to the last card in the todo-box
+      }
+    }
+
+    // Specific styling for the left card, using a secondary color top border
+    &--left {
+      border-top: 2rem solid $color-secondary;
+    }
+
+    // Right card styled with the primary theme color
+    &--right {
+      border-top: 2rem solid $color-primary;
+    }
+  }
+
+  // Title styling within todo cards
+  &__title {
+    margin-bottom: 3rem;
+    text-align: center; // Centers the title text
+  }
+
+  // New item input area within the todo list
+  &__new-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    input {
+      flex-grow: 1;
+      margin-left: 10px;
+      padding: 8px;
+    }
+  }
+
+  // List of todo items, with custom styling to remove default list styling
+  &__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    &-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      width: 100%;
+      cursor: grab;
+    }
+  }
+
+  // Input styles within todo items
+  &__input {
+    border: none;
+    background-color: $color-white;
+    padding: 8px 10px;
+    width: 100%;
+    margin-left: 10px;
+    font-size: $font-size-base;
+    font-weight: $font-weight-bold;
+
+    &:focus {
+      outline: none; // Clean style without default browser outline
+    }
+  }
+}

@@ -1,0 +1,122 @@
+// Styling for a prominent green box
+.green-box {
+  background-color: $color-primary;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 30vh;
+
+  @include respond-to(xlarge) {
+    height: 52rem;
+    width: 108rem;
+    padding: 6rem 8rem;
+    left: -6.5rem;
+    justify-content: flex-start;
+  }
+}
+
+// Base styles for the carousel's transparent container
+.transparent-box {
+  position: absolute;
+  padding: 15px;
+  bottom: 4rem;
+  width: 100%;
+
+  @include respond-to(xlarge) {
+    width: 123rem;
+  }
+}
+
+// Main carousel container
+.carrousel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  @include respond-to(xlarge) {
+    position: absolute;
+    bottom: 8.5rem;
+    left: 0;
+    right: 0;
+    width: 100%;
+    left: 4rem;
+    bottom: 0;
+  }
+}
+
+// Container for carousel cards, enabling horizontal scrolling
+.carrousel__cards {
+  display: flex;
+  overflow-x: auto; // Allow horizontal scrolling only
+  scroll-snap-type: x mandatory;
+  justify-content: flex-start; // Align cards to the start
+  padding: 4rem 0;
+  margin: 0 3rem;
+
+  @include respond-to(xlarge) {
+    justify-content: center;
+    padding: 8rem 0;
+    margin: 0;
+  }
+}
+
+// Individual card styles within the carousel
+.carrousel__card {
+  position: relative;
+  flex: 0 0 auto; // Allow the card to shrink to fit the content
+  max-width: 36rem; // Ensure cards have a max width
+  margin-right: 2rem;
+  background: $color-white;
+  border-radius: 2rem;
+  scroll-snap-align: start;
+  box-shadow: 6px 8px 10px rgba(0, 0, 0, 0.05),
+    12px 12px 15px rgba(0, 0, 0, 0.075);
+
+  @include respond-to(xlarge) {
+    flex: 0 0 36rem;
+    min-width: 0;
+  }
+
+  &-img {
+    height: 20rem;
+  }
+
+  &-logo-small {
+    position: absolute;
+    right: 10px;
+    top: 17.2rem;
+    height: 5.6rem;
+  }
+}
+
+// Details section within each card
+.carrousel__card-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 24rem;
+  padding: 2.2rem 3.4rem;
+}
+
+// Navigation dots for the carousel
+.carrousel__dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 1rem;
+
+  .dot {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    background-color: $color-gray;
+
+    &--green {
+      background-color: $color-primary;
+    }
+  }
+}

@@ -1,0 +1,81 @@
+// Mixin: Hover Effect
+// Purpose: Applies a hover effect to buttons or other interactive elements.
+// @param $color (Color) - Base color for the element.
+// @param $darken (Boolean) - Determines if the hover effect should darken or lighten the color. Defaults to true.
+// Usage: Include inside a selector to add hover effect based on the element's background color.
+@mixin hover-effect($color, $darken: true, $active: true) {
+  @if $active {
+    &:hover {
+      background-color: if($darken, darken($color, 10%), lighten($color, 15%));
+    }
+  }
+}
+
+// Mixin: Button Base
+// Purpose: Sets the foundational styles for all buttons.
+// @param $bg-color (Color) - Background color of the button.
+// @param $text-color (Color) - Text color of the button, defaults to white.
+// Usage: Apply this mixin to any button to initialize its standard styles including hover effects.
+@mixin button-base($bg-color, $text-color: $color-white) {
+  padding: 1.2rem 2.4rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: none;
+  letter-spacing: 1.5px;
+  font-family: inherit;
+  background-color: $bg-color;
+  color: $text-color;
+  display: block;
+
+  &:hover {
+    @include hover-effect($bg-color);
+  }
+}
+
+// Mixin: Button Size
+// Purpose: Configures the padding and border-radius for button elements.
+// @param $padding-horiz (Length) - Horizontal padding for the button.
+// @param $padding-vert (Length) - Vertical padding for the button.
+// @param $border-rad (Length) - Border radius for the button, defaults to 10px.
+// Usage: Use to customize the size and shape of buttons beyond the base styles.
+@mixin button-size($padding-horiz, $padding-vert, $border-rad: 10px) {
+  padding: $padding-vert $padding-horiz;
+  border-radius: $border-rad;
+}
+
+// Mixin: Respond To
+// Purpose: Facilitates writing CSS for different device breakpoints in a mobile-first approach.
+// @param $breakpoint (Key) - The breakpoint from the $breakpoints map at which styles should apply.
+// Usage: Include this mixin within a CSS rule to apply specific styles at the defined breakpoint or larger.
+//        Ensures that the styles adapt as the viewport width crosses the specified breakpoint.
+// Example: @include respond-to('medium') { padding: 50px; }
+// Note: Using 'em' units in media queries to ensure better scalability and accessibility,
+//       as they adapt better to user-set font sizes and other display settings.
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == small {
+    // 600px
+    @media only screen and (min-width: 37.5em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == medium {
+    // 768px;
+    @media only screen and (min-width: 48em) {
+      @content;
+    }
+  }
+  @if $breakpoint == large {
+    // 1024px;
+    @media only screen and (min-width: 64em) {
+      @content;
+    }
+  }
+  @if $breakpoint == xlarge {
+    // 1200px;
+    @media only screen and (min-width: 75em) {
+      @content;
+    }
+  }
+}

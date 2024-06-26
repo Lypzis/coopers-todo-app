@@ -1,0 +1,48 @@
+// Base Elements Reset
+// Setting basic CSS reset for all elements to remove margins, paddings,
+// and enforce box-sizing to border-box for consistent element sizing
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// HTML Root Font Size
+// Setting the root font size to 62.5% makes using rem units easier,
+// as 1rem will equal 10px (10/16 = 62.5%)
+html {
+  font-size: 37.5%; // 1rem = 6px, 6/16 = 37.5%
+
+  @include respond-to("small") {
+    font-size: 43.75%; // 1rem = 7px, 7/16 = 43.75%
+  }
+
+  @include respond-to("medium") {
+    font-size: 50%; // 1rem = 8px, 8/16 = 50%
+  }
+
+  @include respond-to("large") {
+    font-size: 56.25%; // 1rem = 9px, 9/16 = 56.25%
+  }
+
+  @include respond-to("xlarge") {
+    font-size: 62.5%; // 1rem = 10px, 10/16 = 56.25%
+  }
+}
+
+// Body Element
+body {
+  box-sizing: border-box;
+  line-height: $line-height-normal;
+  color: $color-black;
+  background-color: $color-white;
+}
+
+// Selection Styling
+// Customize the color of text selection for better visual coherence with the theme
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
+}

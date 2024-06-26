@@ -1,0 +1,64 @@
+// The Modal
+.modal {
+  // display: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.78);
+  z-index: 5;
+}
+
+.modal-form {
+  width: 100%;
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  @include respond-to(xlarge) {
+    width: 82%;
+    margin-top: 10rem;
+  }
+}
+
+.modal-content {
+  background-color: #fefefe;
+  padding: 2rem;
+  border: 1px solid $color-gray;
+  position: relative;
+  height: 100%;
+  margin: 0;
+  width: 100%;
+
+  @include respond-to(medium) {
+    width: 88rem;
+    height: 72.1rem;
+    margin: 12rem auto;
+  }
+}
+
+.modal-image {
+  width: 23.1rem;
+}
+
+.modal-body {
+  display: flex;
+  gap: 4rem;
+  margin-top: 4rem;
+  flex-direction: column;
+  align-items: center;
+
+  @include respond-to(medium) {
+    flex-direction: row;
+    align-items: normal;
+    margin-top: 0;
+  }
+}
+
+.modal-right {
+  @include respond-to(medium) {
+    margin-top: 4rem;
+  }
+}

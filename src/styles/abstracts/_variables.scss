@@ -1,0 +1,39 @@
+// Colors
+// Standard Colors - Common colors used throughout the application
+$color-black: #000;
+$color-white: #fff;
+$color-gray: #999;
+
+// Theme Colors - Primary and accent colors specific to the brand
+$color-primary: #4ac959; // Green shade used for primary actions and highlights
+$color-secondary: #e88d39; // Orange shade used for secondary actions
+$color-tertiary: #42d76b; // Light green used for tertiary actions and backgrounds
+
+// Typography
+// Base font size - The foundational font size used for general text
+$font-size-base: 1.6rem;
+
+// Additional Font Sizes - Specific sizes used for various typographic scales
+$font-size-xxl: 8rem; // Used for major headings
+$font-size-xl: 6rem; // Used for primary headings
+$font-size-lg-plus: 5rem; // Used for prominent information slightly smaller than primary headings
+$font-size-lg: 4.8rem; // Used for large headers
+$font-size-md-plus: 4rem; // Used for medium-large text
+$font-size-md: 2.4rem; // Used for subheadings or important text
+$font-size-base-plus: 2rem; // Slightly larger than base text
+$font-size-base-medium: 1.8rem; // Commonly used for content body
+$font-size-sm: 1.4rem; // Used for less important information
+
+// Font Weights - Defines the weight of fonts for textual emphasis
+$font-weight-normal: 400; // Normal weight for standard text
+$font-weight-semibold: 600; // Semi-bold weight for emphasized text
+$font-weight-bold: 700; // Bold weight for strong emphasis
+
+// Line Heights - Defines the height of lines for text spacing and readability
+$line-height-loose: 2.1; // Very loose, used for decorative text
+$line-height-relaxed: 1.7; // Relaxed, good for readable body text
+$line-height-normal: 1.5; // Standard, used for most body text
+$line-height-snug: 1.4; // Snug, used for dense information areas
+$line-height-tight: 1.3; // Tight, used for headings
+$line-height-extra-tight: 1.2; // Extra tight, used for compact displays
+$line-height-none: 1; // No additional line height, used for alignments

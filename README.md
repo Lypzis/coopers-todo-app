@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# Coopers Todo App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the frontend client for Coopers Todo App, a dynamic web application designed for managing todos efficiently.
 
-## Available Scripts
+## Specifications
 
-In the project directory, you can run:
+- **Version**: 0.1.0
+- **Privacy**: Private repository
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Clone the repository and install dependencies:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+npm install
 
-### `npm test`
+## Running the Application
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Development
 
-### `npm run build`
+To run the application in development mode:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+npm start
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This will start the app using CRACO, allowing for custom configuration settings without ejecting from Create React App. Open [http://localhost:3000](http://localhost:3000) to view it in the browser. The app will automatically reload if you make any changes to the code.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Production Build
 
-### `npm run eject`
+To create a production build:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+npm run build
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This command compiles the application into static files for production in the `build` folder. It ensures the build is optimized for performance, including minification and efficient loading of resources.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Deployment
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Deploy the production build to GitHub Pages:
 
-## Learn More
+npm run deploy
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This script pushes the contents of the `build` folder to the `gh-pages` branch of your repository, making the site publicly accessible via GitHub Pages.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Dependencies
 
-### Code Splitting
+- **@craco/craco**: Enables custom configurations for Create React App without needing to eject.
+- **@testing-library**: Tools for testing the application components in an environment similar to how a user would interact with the app.
+- **autoprefixer**: Automatically adds vendor prefixes to CSS rules for cross-browser compatibility.
+- **axios**: Facilitates HTTP requests to external services or APIs.
+- **gh-pages**: Simplifies the deployment of the app to GitHub Pages.
+- **react**, **react-dom**: Core React libraries.
+- **react-beautiful-dnd**: Adds drag-and-drop functionality within React components.
+- **react-router-dom**: Manages routing for the app.
+- **react-scripts**: Configuration and scripts for Create React App.
+- **sass**: Allows using Sass for styling, enhancing CSS with features like variables and nested rules.
+- **web-vitals**: Helps measure and analyze the performance of the app.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## License
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the ISC License.

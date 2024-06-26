@@ -1,0 +1,26 @@
+// Base styling for the footer, providing a distinct visual foundation
+.footer {
+  position: relative;
+  background-color: $color-black; // Typically a darker shade
+  color: #fff;
+  padding: 7rem 0;
+  margin-top: 5rem;
+  text-align: center;
+  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+}
+
+.medium-rectangle {
+  position: absolute;
+  bottom: 0; // Ensures it aligns exactly at the bottom
+  left: 50%; // Horizontally centers the element
+  transform: translateX(-50%); // Only shift horizontally
+  width: 51.1rem;
+  height: 4.1rem;
+  background-color: $color-primary;
+  z-index: 2;
+  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+}
+
+.footer-box {
+  line-height: $line-height-loose;
+}

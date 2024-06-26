@@ -1,0 +1,119 @@
+// Base body styles
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-relaxed;
+}
+
+// Primary headings configuration
+.heading-primary {
+  display: block;
+  line-height: $line-height-none;
+  margin-bottom: 4rem;
+  color: $color-primary;
+  font-weight: $font-weight-normal;
+
+  &--main {
+    color: $color-black;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-xxl;
+  }
+
+  &--sub {
+    display: inherit;
+    font-size: $font-size-xl;
+  }
+
+  &--login {
+    display: inherit;
+    font-size: $font-size-lg-plus;
+  }
+
+  &--in-black {
+    display: inline-block;
+    font-family: "Poppins";
+    font-weight: $font-weight-semibold;
+    font-size: $font-size-xl;
+    color: $color-white;
+    border-bottom: 4px solid $color-primary;
+    line-height: $line-height-extra-tight;
+  }
+}
+
+// Secondary headings styles
+.heading-secondary,
+.big-text-paragraph {
+  font-size: $font-size-md;
+  font-weight: $font-weight-normal;
+
+  &--in-black {
+    color: $color-white;
+  }
+
+  &--bold {
+    font-weight: $font-weight-bold;
+  }
+
+  &--big {
+    font-size: $font-size-lg;
+  }
+
+  &--todo {
+    line-height: $line-height-tight;
+  }
+}
+
+// Tertiary headings styles
+.heading-tertiary {
+  font-weight: $font-weight-semibold;
+  font-size: $font-size-md;
+  margin-bottom: 4rem;
+
+  &--todo {
+    font-size: $font-size-md-plus;
+  }
+
+  &--no-margin {
+    margin-bottom: 0;
+  }
+}
+
+// Primary paragraph styles
+.paragraph-primary {
+  font-family: "Poppins";
+  font-weight: $font-weight-semibold;
+}
+
+// Secondary paragraph styles
+.paragraph-secondary {
+  font-weight: $font-weight-normal;
+  font-size: $font-size-base;
+  line-height: $line-height-snug;
+
+  &--bold {
+    font-weight: $font-weight-bold;
+  }
+
+  &--copyright {
+    color: $color-white;
+    font-size: $font-size-sm;
+  }
+}
+
+// Tertiary paragraph styles
+.paragraph-tertiary {
+  font-weight: $font-weight-normal;
+  font-size: $font-size-base-medium;
+  line-height: $line-height-normal;
+}
+
+// Modal and footer paragraph Styles
+.footer-paragraph,
+.modal-label {
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+
+  &--in-black {
+    color: $color-white;
+  }
+}

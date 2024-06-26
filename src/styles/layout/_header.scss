@@ -1,0 +1,27 @@
+// Base styling for the site header
+.header {
+  background-color: $color-white;
+  padding: 1rem;
+
+  @include respond-to("small") {
+    padding: 2rem;
+  }
+
+  @include respond-to(medium) {
+    padding: 2rem 4rem;
+  }
+
+  @include respond-to("xlarge") {
+    padding: 5rem 10rem 0;
+  }
+
+  &__top-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    height: 5rem;
+  }
+}

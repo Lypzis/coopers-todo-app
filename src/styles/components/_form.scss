@@ -1,0 +1,114 @@
+// Base styling for forms
+.form {
+  max-width: 70rem;
+  width: 100%;
+  background: $color-white;
+  padding: 9rem 4rem 4rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+// Styling for the picture box in the form
+.form-picture-box {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: -10rem;
+  left: 50%;
+  transform: translateX(-50%);
+
+  .form-picture {
+    max-width: 19.1rem;
+    height: auto;
+    border-radius: 50%;
+    z-index: 2;
+  }
+
+  // This is the rectangle beside the picture
+  .small-rectangle {
+    background-color: $color-primary;
+    width: 9.5rem;
+    height: 2.3rem;
+    position: absolute;
+    top: 8.5rem;
+    right: 16rem;
+  }
+}
+
+// Box for form title and icon
+.form-title-box {
+  display: flex;
+  gap: 2rem;
+
+  @include respond-to(xlarge) {
+    margin-bottom: 4rem;
+  }
+}
+
+// Title styling within forms
+.form-title {
+  display: flex;
+  flex-direction: column;
+  line-height: $line-height-extra-tight;
+}
+
+// Icon in the form title box
+.form-mail-icon {
+  width: 6rem;
+}
+
+// Common row styling within forms
+.form__row {
+  margin-top: 20px;
+
+  .form-label {
+    display: block;
+    font-size: $font-size-base;
+    margin-bottom: 3px;
+  }
+
+  .form-input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid $color-black;
+    border-radius: 4px;
+    font-size: $font-size-base;
+
+    &:focus {
+      outline: none;
+      border-color: $color-primary;
+    }
+  }
+
+  textarea {
+    resize: vertical; // Allows vertical resize only
+  }
+}
+
+// Column styling within form rows for layout control
+.form__column {
+  display: inline-block;
+  vertical-align: top;
+  width: 48%;
+  margin-right: 4%;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+// modal form inputs
+.modal-form input[type="email"],
+.modal-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #959595;
+  border-radius: 8px;
+  font-size: $font-size-base;
+
+  &:focus {
+    outline: none;
+    border-color: $color-primary;
+  }
+}

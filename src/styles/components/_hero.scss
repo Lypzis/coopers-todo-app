@@ -1,0 +1,56 @@
+// Hero section styles
+.hero {
+  // Text container within the hero section
+  &__text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include respond-to(large) {
+      display: block;
+      margin-bottom: 2rem;
+    }
+  }
+
+  // Container for the hero image and positioning elements
+  &__picture-box {
+    display: none;
+    justify-content: center; // Center horizontally
+    align-items: center; // Center vertically
+
+    @include respond-to(medium) {
+      display: flex; // Change to 'block' or another appropriate display value for larger screens
+    }
+  }
+
+  // Styling for the hero image to ensure it's responsive and visually integrated
+  &__picture {
+    max-width: 30rem;
+    height: auto; // Maintains aspect ratio of the image
+    z-index: 3; // Ensures the image is above other positioned elements
+
+    @include respond-to(large) {
+      max-width: 40rem;
+    }
+
+    @include respond-to(xlarge) {
+      max-width: 44.3rem; // Change to 'block' or another appropriate display value for larger screens
+    }
+  }
+
+  // Additional logo or decorative element within the hero image
+  &__picture-logo {
+    position: absolute;
+    height: 42rem;
+    z-index: 2; // Below the main hero image in stacking context
+    right: 0; // Aligns the logo to the right edge of the parent container
+
+    @include respond-to(large) {
+      height: 64rem;
+    }
+
+    @include respond-to(xlarge) {
+      height: 78rem; // Change to 'block' or another appropriate display value for larger screens
+    }
+  }
+}

@@ -2,11 +2,6 @@
 
 This is the frontend client for Coopers Todo App, a dynamic web application designed for managing todos efficiently.
 
-## Specifications
-
-- **Version**: 0.1.0
-- **Privacy**: Private repository
-
 ## Installation
 
 Clone the repository and install dependencies:
